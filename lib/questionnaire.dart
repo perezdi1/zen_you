@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:zen_you/mainpage.dart';
-class QuestionnairePage extends StatelessWidget {
-  const QuestionnairePage({super.key});
+import 'package:zen_you/sprite.dart';
 
+
+class QuestionnairePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,10 +17,19 @@ class QuestionnairePage extends StatelessWidget {
               child: ElevatedButton(
                 child: const Text('next'),
                 onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MainpagePage()));
-                },
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>SpritePage()));                },
               )
           ),
+          Column(
+            children: [
+              for(var question in questions)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(question.text),
+                ),
+            ],
+          )
+
         ],
       ),
     );
@@ -80,6 +89,5 @@ final questions = [
       options: [const Option(text: 'Yes', correct: true),
         const Option(text: 'No', correct: true)]
   )];
-
 
 
