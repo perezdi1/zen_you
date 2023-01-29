@@ -14,14 +14,14 @@ class _SmsScreenState extends State<SmsScreen> {
   @override
   void initState() {
     twilioFlutter = TwilioFlutter(
-        accountSid: '*************************',
-        authToken: '**************************',
-        twilioNumber: '+1***********');
+        accountSid: 'AC3729694c4e7a86129b2d435fafed4003',
+        authToken: '37277066f98a47267ba02739a84df765',
+        twilioNumber: '+1(888) 365-2924');
     super.initState();
   }
   void sendSms() async {
     twilioFlutter.sendSMS(
-        toNumber: ' ************', messageBody: 'Hii everyone this is a demo of\nflutter twilio sms.');
+        toNumber: ' 2486327132', messageBody: 'Love you sunshine!\n');
   }
   void getSms() async {
     var data = await twilioFlutter.getSmsList();
