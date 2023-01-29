@@ -87,4 +87,4 @@ class _EncouragementFormState extends State<EncouragementForm> {
         Text(_encouragement.isNotEmpty ? _encouragement.first : ''),
       ],
     );
-  }
+  }}
