@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zen_you/main.dart';
+import 'package:zen_you/mainpage.dart';
 class QuestionnairePage extends StatelessWidget {
   const QuestionnairePage({super.key});
 
@@ -17,7 +17,7 @@ class QuestionnairePage extends StatelessWidget {
               child: ElevatedButton(
                 child: const Text('next'),
                 onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>QuestionnairePage()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>MainpagePage()));
                 },
               )
           ),
