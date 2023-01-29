@@ -17,7 +17,7 @@ class QuestionnairePage extends StatelessWidget {
               child: ElevatedButton(
                 child: const Text('next'),
                 onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>SpritePage()));                },
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=> SpritePage()));                },
               )
           ),
           Column(

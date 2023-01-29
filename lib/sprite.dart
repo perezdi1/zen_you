@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zen_you/main.dart';
 import 'package:zen_you/questionnaire.dart';
 
-class sprite extends StatelessWidget {
+class SpritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
