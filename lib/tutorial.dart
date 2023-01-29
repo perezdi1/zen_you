@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zen_you/questionnaire.dart';
+import 'package:zen_you/sms.dart';
 
 
 class TutorialPage extends StatefulWidget {
@@ -65,7 +66,7 @@ class _TutorialPageState extends State<TutorialPage>{
                   child: ElevatedButton(
                     child: const Text('Continue'),
                     onPressed: () {
-                      Navigator.push(context,MaterialPageRoute(builder: (context)=>QuestionnairePage()));
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>const SmsScreen(title: '',)));
                     },
                   )
               )

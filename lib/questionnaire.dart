@@ -1,8 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:zen_you/sprite.dart';
+import 'package:zen_you/sms.dart';
+import 'package:flutter/material.dart';
+class Questionnare extends StatefulWidget {
+  const Questionnare({super.key});
 
+  @override
+  _QuestionnareState createState() => _QuestionnareState();
+}
 
+class _QuestionnareState extends State<Questionnare> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: ListView(
+          children: <Widget>[
+    Container(
+    height: 50,
+    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+    child: ElevatedButton(
+    child: const Text('Continue'),
+    onPressed: () {
+    Navigator.push(context,MaterialPageRoute(builder: (context)=>const SmsScreen(title: '',)));
+    },
+    )
+    ),
+    ]),);
+  }
+}
 class QuestionnairePage extends StatelessWidget {
+  const QuestionnairePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,15 +38,6 @@ class QuestionnairePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          Container(
-              height: 50,
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-              child: ElevatedButton(
-                child: const Text('next'),
-                onPressed: () {
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=> SpritePage()));                },
-              )
-          ),
           Column(
             children: [
               for(var question in questions)
@@ -28,15 +46,12 @@ class QuestionnairePage extends StatelessWidget {
                   child: Text(question.text),
                 ),
             ],
-          )
-
+          ),
         ],
       ),
     );
   }
 }
-
-
 class Question {
   final String text;
   final List<Option> options;
@@ -59,35 +74,12 @@ class Option {
     required this.correct,
   });
 }
-
 final questions = [
-  Question(text: 'How often have you been?',
-      options: [const Option(text: '1 Time',correct: true),
-        const Option(text: '2 Times', correct: true),
-        const Option(text: '3 Times', correct: true),
-        const Option(text: "3+ Times", correct: true)
-      ]
-  ),
-  Question(text: 'How many hours a night have you been sleeping?',
-      options: [const Option(text: '1-4 Hours', correct: true),
-        const Option(text: '5-6 Hours', correct: true),
-        const Option(text: '7-8 Hours', correct: true),
-        const Option(text: '8+ Hours', correct: true)
-      ]
-  ),
   Question(text: 'Have you ever feel like you zone out a lot and is not able to live in the moment? ',
       options: [const Option(text: 'Yes', correct: true),
         const Option(text: 'No', correct: true)]
 
-  ),
-  Question(text: 'Have you not felt like your self or have you noticed signs in a decrease of self worthiness?',
-      options: [const Option(text: 'Yes',correct: true),
-        const Option(text: 'No', correct: true)
-      ]),
-
-  Question(text: 'Has stress been heavily affecting you even on a daily basis?',
-      options: [const Option(text: 'Yes', correct: true),
-        const Option(text: 'No', correct: true)]
-  )];
+  )
+  ];
 
 
