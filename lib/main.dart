@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/tutorial.dart';
+import 'package:zen_you/tutorial.dart';
 
 void main() => runApp(const MyApp());
 

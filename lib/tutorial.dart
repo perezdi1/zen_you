@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/main.dart';
-import 'package:hackathon/questionare.dart';
+
 
 class TutorialPage extends StatefulWidget {
   const TutorialPage({Key? key}) : super(key: key);
